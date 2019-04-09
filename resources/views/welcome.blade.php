@@ -142,7 +142,7 @@
             current_hour: null,
             formName: '',
             formEmail: '',
-            duration: 5000
+            duration: 3000
         },
         methods: {
             getByDay: function () {
