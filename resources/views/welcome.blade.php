@@ -50,7 +50,7 @@
         }
 
         .red {
-            background-color: #ff0000c4
+            background-color: rgba(243, 61, 50, 0.75)
         }
 
         .green {
