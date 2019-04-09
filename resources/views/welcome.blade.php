@@ -200,7 +200,7 @@
                     .then(function (response) {
                         if(response.data.status === 'FAILED'){
                             console.log(response.data);
-                            response.data.data.forEach(function(val){
+                            response.data.data.for(function(val){
                                 that.snackMessage = val[0];
                             });
                             that.showSnackbar = true;
