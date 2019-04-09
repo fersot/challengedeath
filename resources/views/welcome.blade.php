@@ -212,6 +212,7 @@
                             that.formEmail = '';
                         }
                     }).catch(function (response) {
+                        console.log(response);
                     that.snackMessage = 'this time is busy, choose another.';
                     that.showSnackbar = true;
                 })
