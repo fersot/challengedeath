@@ -63,7 +63,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.16), rgb(105, 0, 0)), url(background.jpg) !important;
     background-repeat: no-repeat;">
 <div id="app">
-    <md-toolbar class="md-accent">
+    <md-toolbar class="md-accent" style="position: fixed">
         <h3 class="md-title" style="flex: 1">Schedule of the dance of The Death</h3>
     </md-toolbar>
     <br>
