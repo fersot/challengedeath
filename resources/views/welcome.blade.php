@@ -199,13 +199,10 @@
                 axios.post('/api/1.0/events', $data)
                     .then(function (response) {
                         if(response.data.status === 'FAILED'){
-                            console.log(response.data.data);
-                            that.snackMessage = 'Aqui va un error';
-                            console.log(typeof response.data.data.email);
-                            if(typeof response.data.data.email !== undefined){
-                                that.snackMessage =response.data.data.email[0];
-                            }else if(typeof response.data.data.name !== undefined){
-                                that.snackMessage =response.data.data.name[0];
+                            if(typeof response.data.data.name !== undefined){
+                                that.snackMessage = response.data.data.name[0];
+                            }else if(typeof response.data.data.email !== undefined){
+                                that.snackMessage = response.data.data.email[0];
                             }
                             that.showSnackbar = true;
                         }else{
