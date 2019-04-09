@@ -55,7 +55,7 @@
 
         .green {
             cursor: pointer;
-            background-color: #00800054
+            background-color: #b9ceb954
         }
 
         .green:hover {
