@@ -199,7 +199,7 @@
                 axios.post('/api/1.0/events', $data)
                     .then(function (response) {
                         if(response.data.status === 'FAILED'){
-                            that.snackMessage = 'Please fill in all the fields';
+                            that.snackMessage = response.data.data[0];
                             that.showSnackbar = true;
                         }else{
                             that.getByDay();

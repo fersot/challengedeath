@@ -111,7 +111,7 @@ class EventController extends BaseController
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'date' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
         ]);
         if ($validator->fails()) {
             $response = [
