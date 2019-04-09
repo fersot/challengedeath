@@ -169,12 +169,17 @@
                 console.log($data);
                 axios.post('/api/1.0/events', $data)
                     .then(function (response) {
-                        that.getByDay();
-                        that.snackMessage = 'Scheduled Succesfully';
-                        that.showSnackbar = true;
-                        that.showDialogCreateSchedule = false;
-                        that.formName = '';
-                        that.formEmail = '';
+                        if(response.data.status === 400){
+                            that.snackMessage = 'Please fill in all the fields';
+                            that.showSnackbar = true;
+                        }else{
+                            that.getByDay();
+                            that.snackMessage = 'Scheduled Succesfully';
+                            that.showSnackbar = true;
+                            that.showDialogCreateSchedule = false;
+                            that.formName = '';
+                            that.formEmail = '';
+                        }
                     }).catch(function (response) {
                     that.snackMessage = 'this time is busy, choose another.';
                     that.showSnackbar = true;
