@@ -107,7 +107,8 @@
     <md-list>
         <md-list-item :key="i" v-for="(hour, i) in hours" @click="openToCreate(i)"
                       :class="{green: hour === null, red:hour !== null}">
-            <span v-if="hour === null">@{{ i }}:00  Available</span>
+            <span v-if="checkHour(i)">@{{ i }}:00  Past Hour</span>
+            <span v-else-if="hour === null">@{{ i }}:00  Available</span>
             <span v-else>
                 <div class="md-list-item-text">
           <span>@{{ i }}:00  Busy</span>
@@ -158,6 +159,17 @@
                     that.current_hour = i;
                     that.showDialogCreateSchedule = true;
                 }
+            },
+            checkHour: function (i) {
+                now = moment();
+                that = this;
+                let date = moment(that.datetimeEmpty);
+                date.set({
+                    hour: i,
+                    minute: 0,
+                    second: 0
+                });
+                return now.isAfter(date);
             },
             saveSchedule: function () {
                 that = this;
