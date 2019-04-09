@@ -201,7 +201,9 @@
                         if(response.data.status === 'FAILED'){
                             console.log(response.data.data);
                             that.snackMessage = 'Aqui va un error';
-
+                            for(i=0; i<response.data.data.length;i++){
+                                that.snackMessage = response.data.data[i][0];
+                            }
                             that.showSnackbar = true;
                         }else{
                             that.getByDay();
