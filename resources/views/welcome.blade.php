@@ -14,6 +14,9 @@
             background: #ff5252;
             color: white;
         }
+        .theme-red{
+            width: 100%;
+        }
         .theme-red .vdatetime-year-picker__item--selected,
         .theme-red .vdatetime-time-picker__item--selected,
         .theme-red .vdatetime-popup__actions__button {
