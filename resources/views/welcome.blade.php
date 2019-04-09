@@ -192,8 +192,13 @@
                 that = this;
                 now = moment().subtract(1, 'day');
                 var past = now.isAfter(value);
+                console.log(moment(value).isoWeekday());
                 if (past) {
                     that.snackMessage = 'Sorry its a past day, Pick another day';
+                    that.showSnackbar = true;
+                    that.hours = [];
+                } else if(moment(value).isoWeekday() === 6 || moment(value).isoWeekday() === 7){
+                    that.snackMessage = 'Sorry, the death only dances from Monday to Friday';
                     that.showSnackbar = true;
                     that.hours = [];
                 } else {
