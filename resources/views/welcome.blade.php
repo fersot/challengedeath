@@ -154,8 +154,17 @@
                     })
             },
             openToCreate: function (i) {
+                now = moment();
                 that = this;
-                if (that.hours[i] === null) {
+                let date = moment(that.datetimeEmpty);
+                date.set({
+                    hour: i,
+                    minute: 0,
+                    second: 0
+                });
+                if (now.isAfter(date)){
+
+                }else if (that.hours[i] === null) {
                     that.current_hour = i;
                     that.showDialogCreateSchedule = true;
                 }
