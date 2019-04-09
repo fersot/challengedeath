@@ -67,6 +67,9 @@
         <h3 class="md-title" style="flex: 1">Schedule of the dance of The Death</h3>
     </md-toolbar>
     <br>
+    <br>
+    <br>
+    <br>
     <div style="width: 100%;">
         <div class="md-title" style="color: white">Select a day</div>
         <div class="md-field md-theme-default" style="width: 100%;color: white">
