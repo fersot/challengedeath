@@ -199,6 +199,7 @@
                 axios.post('/api/1.0/events', $data)
                     .then(function (response) {
                         if(response.data.status === 'FAILED'){
+                            console.log(response.data);
                             response.data.data.forEach(function(val){
                                 that.snackMessage = val[0];
                             });
