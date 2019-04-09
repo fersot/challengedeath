@@ -199,7 +199,9 @@
                 axios.post('/api/1.0/events', $data)
                     .then(function (response) {
                         if(response.data.status === 'FAILED'){
-                            that.snackMessage = response.data.data[0][0];
+                            response.data.data.forEach(function(val){
+                                that.snackMessage = val[0];
+                            });
                             that.showSnackbar = true;
                         }else{
                             that.getByDay();
