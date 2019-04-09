@@ -20,7 +20,7 @@
             color: #ff5252;
         }
         .md-field .md-input, .md-field .md-textarea {
-            width: 300px;
+            width: 100%;
             height: 32px;
             padding: 0;
             display: block;
@@ -63,9 +63,9 @@
     <md-toolbar class="md-accent">
         <h3 class="md-title" style="flex: 1">Schedule of the dance of The Death</h3>
     </md-toolbar>
-    <div>
+    <div style="width: 100%;">
         <div class="md-title" style="color: white">Select a day</div>
-        <div class="md-field md-theme-default" style="width: 300px;color: white">
+        <div class="md-field md-theme-default" style="width: 100%;color: white">
             <datetime
                     ref="datepicker"
                     id="datepicker"
