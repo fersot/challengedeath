@@ -202,6 +202,7 @@
                             console.log(response.data.data);
                             that.snackMessage = 'Aqui va un error';
                             for(i=0; i<response.data.data.length;i++){
+                                console.log(response.data.data[i][0]);
                                 that.snackMessage = response.data.data[i][0];
                             }
                             that.showSnackbar = true;
