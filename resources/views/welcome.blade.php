@@ -80,7 +80,7 @@
             ></datetime>
         </div>
     </div>
-    <md-dialog :md-active.sync="showDialogCreateSchedule">
+    <md-dialog class="alert-dark" :md-active.sync="showDialogCreateSchedule">
         <md-dialog-title>Create Schedule</md-dialog-title>
         <md-dialog-content>
             <md-field>
