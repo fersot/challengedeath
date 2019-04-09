@@ -14,13 +14,11 @@
             background: #ff5252;
             color: white;
         }
-
         .theme-red .vdatetime-year-picker__item--selected,
         .theme-red .vdatetime-time-picker__item--selected,
         .theme-red .vdatetime-popup__actions__button {
             color: #ff5252;
         }
-
         .md-field .md-input, .md-field .md-textarea {
             width: 300px;
             height: 32px;
@@ -36,28 +34,23 @@
             font-size: 20px;
             line-height: 32px;
         }
-
         .md-accent {
             background-color: #a90f0e !important;
         }
-    </style>
-    <style>
+
         .md-list.md-theme-default {
 
             background-color: #fff0;
             color: rgba(0, 0, 0, 0.87);
             color: var(--md-theme-default-text-primary-on-background, rgba(0, 0, 0, 0.87));
         }
-
         .red {
             background-color: rgba(243, 61, 50, 0.75)
         }
-
         .green {
             cursor: pointer;
             background-color: #b9ceb954
         }
-
         .green:hover {
             background-color: rgba(118, 134, 118, 0.33)
         }
@@ -68,7 +61,7 @@
     background-repeat: no-repeat;">
 <div id="app">
     <md-toolbar class="md-accent">
-        <h3 class="md-title" style="flex: 1">Schedule of the dance of death</h3>
+        <h3 class="md-title" style="flex: 1">Schedule of the dance of The Death</h3>
     </md-toolbar>
     <div>
         <div class="md-title" style="color: white">Select a day</div>
@@ -91,11 +84,11 @@
         <md-dialog-title>Create Schedule</md-dialog-title>
         <md-dialog-content>
             <md-field>
-                <label>Name</label>
+                <label>Name of dancer</label>
                 <md-input v-model="formName"></md-input>
             </md-field>
             <md-field>
-                <label>Email</label>
+                <label>Email of dancer</label>
                 <md-input type="email" v-model="formEmail"></md-input>
             </md-field>
         </md-dialog-content>
@@ -198,7 +191,7 @@
                     that.snackMessage = 'Sorry its a past day, Pick another day';
                     that.showSnackbar = true;
                     that.hours = [];
-                } else if(moment(value).isoWeekday() === 6 || moment(value).isoWeekday() === 7){
+                } else if (moment(value).isoWeekday() === 6 || moment(value).isoWeekday() === 7) {
                     that.snackMessage = 'Sorry, the death only dances from Monday to Friday';
                     that.showSnackbar = true;
                     that.hours = [];
