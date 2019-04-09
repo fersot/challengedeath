@@ -59,7 +59,7 @@
         }
 
         .green:hover {
-            background-color: rgba(0, 111, 0, 0.33)
+            background-color: rgba(118, 134, 118, 0.33)
         }
     </style>
 </head>
