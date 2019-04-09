@@ -107,7 +107,7 @@
     <md-list>
         <md-list-item :key="i" v-for="(hour, i) in hours" @click="openToCreate(i)"
                       :class="{green: hour === null, red:hour !== null}">
-            <span v-if="checkHour(i)">@{{ i }}:00  Past Hour</span>
+            <span v-if="checkHour(i)">@{{ i }}:00  Already this time happened</span>
             <span v-else-if="hour === null">@{{ i }}:00  Available</span>
             <span v-else>
                 <div class="md-list-item-text">
