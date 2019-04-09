@@ -201,7 +201,8 @@
                         if(response.data.status === 'FAILED'){
                             if(typeof response.data.data.name !== undefined){
                                 that.snackMessage = response.data.data.name[0];
-                            }else if(typeof response.data.data.email !== undefined){
+                            }
+                            if(typeof response.data.data.email !== undefined){
                                 that.snackMessage = response.data.data.email[0];
                             }
                             that.showSnackbar = true;
