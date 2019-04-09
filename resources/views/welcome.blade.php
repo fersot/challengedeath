@@ -116,7 +116,7 @@
             </span>
         </md-list-item>
     </md-list>
-    <md-snackbar md-position="center" :md-duration="parseInt('1000')" :md-active.sync="showSnackbar" md-persistent>
+    <md-snackbar md-position="center" :md-duration="duration" :md-active.sync="showSnackbar" md-persistent>
         <span>@{{ snackMessage }}</span>
         <md-button class="md-primary" @click="showSnackbar = false">Close</md-button>
     </md-snackbar>
@@ -141,7 +141,8 @@
             hours: [],
             current_hour: null,
             formName: '',
-            formEmail: ''
+            formEmail: '',
+            duration: 5000
         },
         methods: {
             getByDay: function () {
