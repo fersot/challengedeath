@@ -198,6 +198,8 @@
                     .then(function (response) {
                         if(response.data.status === 'FAILED'){
                             data = response.data.data;
+                            console.log(typeof data.email);
+                            console.log(typeof data.name);
                             if(typeof data.email !== undefined){
                                 that.snackMessage = data.email[0];
                             }
