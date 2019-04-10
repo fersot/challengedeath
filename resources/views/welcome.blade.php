@@ -197,6 +197,7 @@
                 axios.post('/api/1.0/events', $data)
                     .then(function (response) {
                         if(response.data.status === 'FAILED'){
+                            data = response.data.data;
                             if(typeof data.email !== 'undefined'){
                                 that.snackMessage = data.email[0];
                             }
